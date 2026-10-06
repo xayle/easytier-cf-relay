@@ -130,9 +130,9 @@ bindings = [
 
 # KV 审计绑定（记录 + 黑名单）。创建后取消注释并填入 id：
 #   npx wrangler kv namespace create AUDIT_KV
-# [[kv_namespaces]]
-# binding = "AUDIT_KV"
-# id = "<你的 KV namespace id>"
+[[kv_namespaces]]
+binding = "AUDIT_KV"
+id = "a8fd5f1d9ed94467bb409496f85269d5"
 # Analytics Engine 绑定（v1.6：趋势打点，免费计划含 100,000 数据点/天；
 # 本方案每分钟 1 点 ≈ 1,440/天）。绑定即自动建数据集，无需额外创建步骤
 # ⚠️ 注意：本绑定要求账号先在 Dashboard 一次性开通 Analytics Engine
@@ -141,9 +141,9 @@ bindings = [
 #   Engine」，整个部署失败（线上不受影响，开通后重跑即可）。不需要趋势图
 #   可注释掉下面 3 行——代码自动降级，其余功能不受影响。
 # 打开 https://dash.cloudflare.com/{CF_ACCOUNT_ID}/workers/analytics-engine
-# [[analytics_engine_datasets]]
-# binding = "AE"
-# dataset = "easytier-cf-relay"
+[[analytics_engine_datasets]]
+binding = "AE"
+dataset = "easytier-cf-relay"
 
 [[migrations]]
 tag = "v1"
